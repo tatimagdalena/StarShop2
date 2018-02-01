@@ -9,12 +9,6 @@
 import Foundation
 import RxSwift
 
-struct ShopCellViewModel {
-    let titleText: String
-    let priceText: String
-    let imageUrl: String
-}
-
 protocol ShopViewModelProtocol {
     
     var isLoading: Bool { get set }

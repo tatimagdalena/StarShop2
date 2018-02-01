@@ -103,11 +103,3 @@ class ShopViewController: UICollectionViewController {
     }
 
 }
-
-class ShopCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    
-    static let identifier = "productCellIdentifier"
-}
