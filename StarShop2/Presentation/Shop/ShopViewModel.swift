@@ -76,7 +76,7 @@ class ShopViewModel: ShopViewModelProtocol {
             .disposed(by: disposeBag)
     }
     
-    private func processFetchedProducts(_ products: [Product]) {
+    private func processFetchedProducts(_ products: [ProductResponse]) {
         //self.products = products
         var cellViewModels = [ShopCellViewModel]()
         for product in products {

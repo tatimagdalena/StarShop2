@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Product: Decodable {
+struct ProductResponse: Decodable {
     var title: String
     var price: Int
     var seller: String
