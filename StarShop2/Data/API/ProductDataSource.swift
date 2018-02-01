@@ -15,8 +15,6 @@ protocol ProductDataSourceProtocol {
 
 struct ProductDataSource: ProductDataSourceProtocol {
     
-    let disposeBag = DisposeBag()
-    
     func fetchAvailableProducts() -> Observable<[Product]> {
         
         let getProductsUrl = "https://private-428d5-starshop.apiary-mock.com/product"

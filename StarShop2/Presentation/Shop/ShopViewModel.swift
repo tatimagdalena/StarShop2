@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct ShopCellViewModel {
     let titleText: String
@@ -30,6 +31,8 @@ protocol ShopViewModelProtocol {
 }
 
 class ShopViewModel: ShopViewModelProtocol {
+    
+    let disposeBag = DisposeBag()
     
     let dataSource: ProductDataSourceProtocol
     //private var products = [Product]()
@@ -68,14 +71,15 @@ class ShopViewModel: ShopViewModelProtocol {
     
     func loadData() {
         self.isLoading = true
-        dataSource.fetchAvailableProducts(successHandler: { [weak self] products in
-            self?.processFetchedProducts(products)
-            self?.isLoading = false
-            
-        }, errorHandler: { [weak self] error in
-            
-            self?.isLoading = false
-        })
+        dataSource.fetchAvailableProducts()
+            .subscribe(onNext: { [weak self] (products) in
+                self?.processFetchedProducts(products)
+                self?.isLoading = false
+                }, onError: { [weak self] (error) in
+                    print(error)
+                    self?.isLoading = false
+            })
+            .disposed(by: disposeBag)
     }
     
     private func processFetchedProducts(_ products: [Product]) {
