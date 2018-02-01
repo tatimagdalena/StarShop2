@@ -10,39 +10,29 @@ import Foundation
 import RxSwift
 
 protocol ProductDataSourceProtocol {
-    typealias SuccessCallback = (_ products: [Product]) -> ()
-    typealias ErrorCallback = (_ error: Error) -> ()
-    
-    func fetchAvailableProducts(successHandler: @escaping SuccessCallback, errorHandler: @escaping ErrorCallback)
+    func fetchAvailableProducts() -> Observable<[Product]>
 }
 
 struct ProductDataSource: ProductDataSourceProtocol {
     
     let disposeBag = DisposeBag()
     
-    func fetchAvailableProducts(successHandler: @escaping SuccessCallback, errorHandler: @escaping ErrorCallback) {
+    func fetchAvailableProducts() -> Observable<[Product]> {
         
         let getProductsUrl = "https://private-428d5-starshop.apiary-mock.com/product"
         
-        Networking.sendGetRequest(url: getProductsUrl)
+        return Networking.sendGetRequest(url: getProductsUrl)
             .retry(1)
             .timeout(60, scheduler: MainScheduler.instance)
+            .map { data in try self.serializeProducts(data: data) }
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { data in
-                do {
-                    let products = try JSONDecoder().decode([Product].self, from: data)
-                    print("got result: \(products)")
-                    successHandler(products)
-                } catch let error {
-                    print("decoding error \(error)")
-                    errorHandler(error)
-                }
-            }, onError: { (error) in
-                print(error)
-                errorHandler(error)
-            })
-            .disposed(by: disposeBag)
+    }
+    
+    func serializeProducts(data: Data) throws -> [Product]  {
+        let products = try JSONDecoder().decode([Product].self, from: data)
+        print("got result: \(products)")
+        return products
     }
     
 }

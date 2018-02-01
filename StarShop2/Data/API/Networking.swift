@@ -19,7 +19,7 @@ enum APIError: Error {
     case server
 }
 
-class Networking {
+struct Networking {
     
     static func sendGetRequest(url: String, parameters: [String: Any]? = nil, headers: [String: String]? = nil) -> Observable<Data> {
         
