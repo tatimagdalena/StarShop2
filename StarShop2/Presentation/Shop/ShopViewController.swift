@@ -15,13 +15,19 @@ class ShopViewController: UICollectionViewController {
     lazy var viewModel: ShopViewModelProtocol = {
         return ShopViewModel(dataSource: ProductDataSource())
     }()
+
+}
+
+// MARK: - Lifecycle -
+
+extension ShopViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initViewModel()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,28 +63,35 @@ class ShopViewController: UICollectionViewController {
         
         viewModel.loadData()
     }
+    
+}
 
-    /*
-    // MARK: - Navigation
+//// MARK: - Navigation -
+//
+//extension ShopViewController {
+//    /*
+//
+//     // In a storyboard-based application, you will often want to do a little preparation before navigation
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//     // Get the new view controller using [segue destinationViewController].
+//     // Pass the selected object to the new view controller.
+//     }
+//     */
+//}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+// MARK: - UICollectionViewDataSource -
 
-    // MARK: UICollectionViewDataSource
-
+extension ShopViewController {
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfCells
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopCollectionViewCell.identifier, for: indexPath) as? ShopCollectionViewCell else { fatalError("Cell does not exist in storyboard") }
@@ -95,11 +108,14 @@ class ShopViewController: UICollectionViewController {
         
         return cell
     }
+    
+}
 
-    // MARK: UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate -
 
+extension ShopViewController {
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.viewModel.userPressed(at: indexPath)
     }
-
 }
