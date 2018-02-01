@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161B22AC2020F958008D0746 /* ProductPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B22AB2020F958008D0746 /* ProductPresentation.swift */; };
 		41A70625201A31670017AAAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A70624201A31670017AAAA /* AppDelegate.swift */; };
-		41A70627201A31670017AAAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A70626201A31670017AAAA /* ViewController.swift */; };
 		41A7062A201A31670017AAAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A70628201A31670017AAAA /* Main.storyboard */; };
 		41A7062C201A31670017AAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A7062B201A31670017AAAA /* Assets.xcassets */; };
 		41A7062F201A31670017AAAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A7062D201A31670017AAAA /* LaunchScreen.storyboard */; };
@@ -17,6 +17,13 @@
 		41A70656201A37260017AAAA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A70653201A37250017AAAA /* Alamofire.framework */; };
 		41A70657201A37260017AAAA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A70654201A37260017AAAA /* RxCocoa.framework */; };
 		41A70658201A37260017AAAA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A70655201A37260017AAAA /* RxSwift.framework */; };
+		41A7065D201A4AA00017AAAA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7065C201A4AA00017AAAA /* ShopViewController.swift */; };
+		41A7065F201A4AF40017AAAA /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7065E201A4AF40017AAAA /* ShopViewModel.swift */; };
+		41A70662201A5E480017AAAA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A70661201A5E480017AAAA /* Product.swift */; };
+		41A70667201F622B0017AAAA /* Int+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A70666201F622B0017AAAA /* Int+Currency.swift */; };
+		41A7066A201F6E150017AAAA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A70669201F6E150017AAAA /* Networking.swift */; };
+		41A7066C201F74280017AAAA /* ProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7066B201F74280017AAAA /* ProductDataSource.swift */; };
+		41A7066E201F924E0017AAAA /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A7066D201F924E0017AAAA /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161B22AB2020F958008D0746 /* ProductPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentation.swift; sourceTree = "<group>"; };
 		41A70621201A31670017AAAA /* StarShop2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarShop2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A70624201A31670017AAAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41A70626201A31670017AAAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41A70629201A31670017AAAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41A7062B201A31670017AAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41A7062E201A31670017AAAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +60,13 @@
 		41A70653201A37250017AAAA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		41A70654201A37260017AAAA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		41A70655201A37260017AAAA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		41A7065C201A4AA00017AAAA /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		41A7065E201A4AF40017AAAA /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		41A70661201A5E480017AAAA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		41A70666201F622B0017AAAA /* Int+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Currency.swift"; sourceTree = "<group>"; };
+		41A70669201F6E150017AAAA /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		41A7066B201F74280017AAAA /* ProductDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSource.swift; sourceTree = "<group>"; };
+		41A7066D201F924E0017AAAA /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A70656201A37260017AAAA /* Alamofire.framework in Frameworks */,
+				41A7066E201F924E0017AAAA /* AlamofireImage.framework in Frameworks */,
 				41A70657201A37260017AAAA /* RxCocoa.framework in Frameworks */,
 				41A70658201A37260017AAAA /* RxSwift.framework in Frameworks */,
 			);
@@ -83,6 +98,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161B22AA2020F8C4008D0746 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				41A7065A201A4A440017AAAA /* Shop */,
+				41A7065B201A4A530017AAAA /* History */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		161B22AD2020FA0D008D0746 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41A70661201A5E480017AAAA /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		161B22AE2020FA97008D0746 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				41A70669201F6E150017AAAA /* Networking.swift */,
+				41A7066B201F74280017AAAA /* ProductDataSource.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		41A70618201A31670017AAAA = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +148,10 @@
 		41A70623201A31670017AAAA /* StarShop2 */ = {
 			isa = PBXGroup;
 			children = (
+				161B22AA2020F8C4008D0746 /* Presentation */,
+				41A70668201F6E010017AAAA /* Data */,
+				41A70665201F60950017AAAA /* Extensions */,
 				41A70624201A31670017AAAA /* AppDelegate.swift */,
-				41A70626201A31670017AAAA /* ViewController.swift */,
 				41A70628201A31670017AAAA /* Main.storyboard */,
 				41A7062B201A31670017AAAA /* Assets.xcassets */,
 				41A7062D201A31670017AAAA /* LaunchScreen.storyboard */,
@@ -138,11 +181,46 @@
 		41A70652201A37250017AAAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41A7066D201F924E0017AAAA /* AlamofireImage.framework */,
 				41A70653201A37250017AAAA /* Alamofire.framework */,
 				41A70654201A37260017AAAA /* RxCocoa.framework */,
 				41A70655201A37260017AAAA /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41A7065A201A4A440017AAAA /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				41A7065C201A4AA00017AAAA /* ShopViewController.swift */,
+				41A7065E201A4AF40017AAAA /* ShopViewModel.swift */,
+				161B22AB2020F958008D0746 /* ProductPresentation.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		41A7065B201A4A530017AAAA /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		41A70665201F60950017AAAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41A70666201F622B0017AAAA /* Int+Currency.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41A70668201F6E010017AAAA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				161B22AE2020FA97008D0746 /* API */,
+				161B22AD2020FA0D008D0746 /* Model */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +363,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			name = "Carthage runscript";
 			outputPaths = (
@@ -300,8 +379,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A70627201A31670017AAAA /* ViewController.swift in Sources */,
+				41A7065F201A4AF40017AAAA /* ShopViewModel.swift in Sources */,
+				161B22AC2020F958008D0746 /* ProductPresentation.swift in Sources */,
+				41A70662201A5E480017AAAA /* Product.swift in Sources */,
+				41A70667201F622B0017AAAA /* Int+Currency.swift in Sources */,
 				41A70625201A31670017AAAA /* AppDelegate.swift in Sources */,
+				41A7065D201A4AA00017AAAA /* ShopViewController.swift in Sources */,
+				41A7066C201F74280017AAAA /* ProductDataSource.swift in Sources */,
+				41A7066A201F6E150017AAAA /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -455,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -474,6 +559,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = StarShop2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tom.StarShop2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,6 +579,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = StarShop2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tom.StarShop2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
