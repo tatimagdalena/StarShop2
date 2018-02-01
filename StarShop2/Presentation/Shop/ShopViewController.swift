@@ -18,6 +18,7 @@ class ShopViewController: UICollectionViewController {
 
 }
 
+
 // MARK: - Lifecycle -
 
 extension ShopViewController {
@@ -26,6 +27,7 @@ extension ShopViewController {
         super.viewDidLoad()
         
         initViewModel()
+        viewModel.loadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,24 +62,10 @@ extension ShopViewController {
                 print("alert closure")
             }
         }
-        
-        viewModel.loadData()
     }
     
 }
 
-//// MARK: - Navigation -
-//
-//extension ShopViewController {
-//    /*
-//
-//     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//     // Get the new view controller using [segue destinationViewController].
-//     // Pass the selected object to the new view controller.
-//     }
-//     */
-//}
 
 // MARK: - UICollectionViewDataSource -
 
@@ -110,6 +98,7 @@ extension ShopViewController {
     }
     
 }
+
 
 // MARK: - UICollectionViewDelegate -
 
