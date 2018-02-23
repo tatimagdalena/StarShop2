@@ -20,3 +20,7 @@ The API requests are being mocked with an [Apiary project](https://starshop.docs
 - [The introduction to RxSwift you have been missing](https://github.com/orakaro/The-introduction-to-RxSwift-you-have-been-missing)
 - [Getting Started With RxSwift and RxCocoa](https://www.raywenderlich.com/138547/getting-started-with-rxswift-and-rxcocoa)
 - [RxSwift documentation](https://github.com/ReactiveX/RxSwift/tree/master/Documentation)
+
+#### MVVM & RxSwift
+
+- [MVVM RxSwift](https://academy.realm.io/posts/slug-max-alexander-mvvm-rxswift/)
